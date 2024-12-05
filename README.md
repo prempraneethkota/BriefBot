@@ -220,4 +220,10 @@ def limit_memory_usage(max_usage_percent=85):
 ## License
 ### This project is licensed under the MIT License. See the LICENSE file for details.
 Note: To use the model, ensure that you download the "model.safetensors" [file](https://drive.google.com/file/d/1tvB_t9TNWHwrrGaA_6zyeMt8XlQeU3AQ/view?usp=drive_link) from the link provided and place it in the "summarization_model directory".
+### Screenshot
+### Text input: 
+```ssh
+The announcement by Jaguar that it's repositioning itself as an ultra-luxury EV brand will also see the British carmaker's classic iconography undergo a complete redesign. The famous leaping tiger will remain, but in a more angular appearance. Also set for a makeover are logos, typefaces, and color palette. The radical revamp follows the disappearance of the famous roaring cat logo and equally celebrated leaping jaguar hood ornament from the Jaguar lineup, and traditionalists are wondering how these latest logos will appear on cars.
+```
+![image](https://github.com/user-attachments/assets/289e85ee-cb32-4992-92dc-7162a1d83877)
 
