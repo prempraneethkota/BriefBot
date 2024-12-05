@@ -168,29 +168,6 @@ trainer.train()
 # Save the model and tokenizer
 trainer.save_model("./summarization_model")
 tokenizer.save_pretrained("./summarization_model")
-
-# Generate summary for a new article
-
-
-def generate_summary(text):
-    inputs = tokenizer([text], max_length=512, truncation=True, return_tensors="pt").to(device)
-    summary_ids = model.generate(
-        inputs["input_ids"],
-        num_beams=4,
-        max_length=150,
-        early_stopping=True,
-        no_repeat_ngram_size=3
-    )
-    return tokenizer.decode(summary_ids[0], skip_special_tokens=True)
-
-# Example usage
-input_article = """
-Lung cancer is a type of cancer that begins in the lungs. Your lungs are two spongy organs in your chest that take in oxygen when you inhale and release carbon dioxide when you exhale.
-Lung cancer is the leading cause of cancer deaths worldwide. People who smoke have the greatest risk of lung cancer, though lung cancer can also occur in people who have never smoked.
-The risk of lung cancer increases with the length of time and number of cigarettes you've smoked. If you quit smoking, even after smoking for many years, you can significantly reduce your chances of developing lung cancer.
-"""
-print("Generated Summary:")
-print(generate_summary(input_article))
 ```
 ## Generating Summaries
 ### Function to Generate Summaries
@@ -237,8 +214,10 @@ def limit_memory_usage(max_usage_percent=85):
 - Run.py
 - Brief3.py
 - Readme.md
+- summarization_model
 ## Contributing
 ### Feel free to fork this repository and contribute by submitting pull requests. For major changes, please open an issue first to discuss what you would like to change.
 ## License
 ### This project is licensed under the MIT License. See the LICENSE file for details.
-To use the model, ensure that you download the "model.safetensors" file from the link provided and place it in the "summarization_model directory".
+Note: To use the model, ensure that you download the "model.safetensors" [file](https://drive.google.com/file/d/1tvB_t9TNWHwrrGaA_6zyeMt8XlQeU3AQ/view?usp=drive_link) from the link provided and place it in the "summarization_model directory".
+
